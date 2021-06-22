@@ -1,0 +1,350 @@
+import math
+import time
+import random
+#bellow youll find my potions genorator, hi hun
+def potion_gen():
+    print("Welcom to the D&D potion genorator!\nWhat level are your players")
+    level=int(input())
+    time.sleep(.25)
+    print("Great, so how many sessions did it take for your player to get this loot?")
+    sessions=int(input())
+    time.sleep(.25)
+    print("Sweet, now have your players role a investigation check and put the highest number here")
+    perception=int(input())
+    time.sleep(.25)
+    print("Last but not lease tell me how many player you have")
+    number=int(input())
+    lv1p_list = ["2 2d4+2"]
+    lv5p_list = ["2 4d4+4", "6 2d4+2"]
+    lv10p_list = ["2 8d4+8", "6 4d4+4" "18 2d4+2"]
+    lv15p_list = ["2 10d4+20" "6 8d4+8", "18 4d4+4" "54 2d4+2"]
+#lists for potions^
+    ap=random.choice(lv15p_list)
+    bp=random.choice(lv10p_list)
+    cp=random.choice(lv5p_list)
+    dp=random.choice(lv1p_list)
+#^random cariables for potions
+    time.sleep(.45)
+    if level > 15:
+        for x in range(0, number):
+            ap=random.choice(lv15p_list)
+            print("They get "+ap+" healing potions")
+    elif level >10:
+         for x in range(0, number):
+            bp=random.choice(lv10p_list)
+            print("They get "+bp+" healing potions")
+    elif level >5:
+          for x in range(0, number):
+            cp=random.choice(lv5p_list)
+            print("They get "+cp+" healing potions")
+    else:
+          for x in range(0, number):
+            dp=random.choice(lv1p_list)
+            print("They get "+dp+" healing potions")
+    q=input()
+#if then statments for potions
+
+#below youll find my magic idem genorator
+def magic_gen():
+    print("Welcom to the D&D magic genorator!\nWhat level are your players")
+    level=int(input())
+    time.sleep(.25)
+    print("Great, so how many sessions did it take for your player to get this loot?")
+    sessions=int(input())
+    time.sleep(.25)
+    print("Sweet, now have your players role a investigation check and put the highest number here")
+    perception=int(input())
+    time.sleep(.25)
+    print("Last but not lease tell me how many player you have")
+    number=int(input())
+#above you'll fine the questions dm's will be asked to figure out what their loot should be.
+    time.sleep(.25)
+    lv1_list = ["+1 long sowrd","+1 sheild", "+1 studded leather arrmor", "+1 spellcasting focus"]
+    lv5_list = ["+2_long_sowrd","+2 sheild", "+2 studded leather arrmor", "+2 spellcasting focus"]
+    lv10_list = ["+3_long_sowrd","+3 sheild", "+3 studded leather arrmor", "+3 spellcasting focus"]
+    lv15_list = ["+4_long_sowrd","+4 sheild", "+4 studded leather arrmor", "+4 spellcasting focus"]
+#these are the list of magic goodies, they can be easily eddited to add more fun stuff
+    a=random.choice(lv15_list)
+    b=random.choice(lv10_list)
+    c=random.choice(lv5_list)
+    d=random.choice(lv1_list)
+#this ^ choises idems from the lists at radom 
+    if level > 15:
+        for x in range(0, number):
+            a=random.choice(lv15_list)
+            print(a)
+    elif level >10:
+         for x in range(0, number):
+            b=random.choice(lv10_list)
+            print(b)
+    elif level >5:
+          for x in range(0, number):
+            c=random.choice(lv5_list)
+            print(c)
+    else:
+          for x in range(0, number):
+            d=random.choice(lv1_list)
+            print(d)
+# these if else statments figure out what kind of magic stuff the player should get. 
+    
+def just_gold():
+    print("Welcom to the D&D gold genorator!\nWhat level are your players")
+    level=int(input())
+    time.sleep(.25)
+    print("Great, so how many sessions did it take for your player to get this loot?")
+    sessions=int(input())
+    time.sleep(.25)
+    print("Sweet, now have your players role a investigation check and put the highest number here")
+    perception=int(input())
+    time.sleep(.25)
+    print("Last but not lease tell me how many player you have")
+    number=int(input())
+    time.sleep(.25)
+    values = [.8, .9, .9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 2]
+    x=random.choice(values)
+    gold=round (x*(.00012*(level**7)*sessions*math.log(perception,2)*number+(100*(level*sessions))))
+    print("Your players get "+str(gold)+" gold. Hope they dont spend it all in the same place")
+#questions for dms (the assteemed code reader will notice these are the same for gold, and all other loot gens)
+#the gold genoration equations
+def all_gen():
+    
+    print("Welcom to the D&D loot genorator!\nWhat level are your players")
+    level=int(input())
+    time.sleep(.25)
+    print("Great, so how many sessions did it take for your player to get this loot?")
+    sessions=int(input())
+    time.sleep(.25)
+    print("Sweet, now have your players role a investigation check and put the highest number here")
+    perception=int(input())
+    time.sleep(.25)
+    print("Last but not lease tell me how many player you have")
+    number=int(input())
+    time.sleep(.25)
+    print("Great now I have everyhting I need, just give me a few seconds and I'll make \nsome great loot for your players!")
+    #questions for players^
+    time.sleep(1)
+    values = [.8, .9, .9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 2]
+    x=random.choice(values)
+    gold=round (x*(.00012*(level**7)*sessions*math.log(perception,2)*number+(100*(level*sessions))))
+    print("Your players get "+str(gold)+" gold. Hope they dont spend it all in the same place")
+    #gold genoration equation^
+    lv1_list = ["+1 long sowrd","+1 sheild", "+1 studded leather arrmor", "+1 spellcasting focus"]
+    lv5_list = ["+2_long_sowrd","+2 sheild", "+2 studded leather arrmor", "+2 spellcasting focus"]
+    lv10_list = ["+3_long_sowrd","+3 sheild", "+3 studded leather arrmor", "+3 spellcasting focus"]
+    lv15_list = ["+4_long_sowrd","+4 sheild", "+4 studded leather arrmor", "+4 spellcasting focus"]
+    #lits for magic ideams^
+    lv1p_list = ["2 2d4+2"]
+    lv5p_list = ["2 4d4+4", "6 2d4+2"]
+    lv10p_list = ["2 8d4+8", "6 4d4+4" "18 2d4+2"]
+    lv15p_list = ["2 10d4+20" "6 8d4+8", "18 4d4+4" "54 2d4+2"]
+    #lists for potions^
+    a=random.choice(lv15_list)
+    b=random.choice(lv10_list)
+    c=random.choice(lv5_list)
+    d=random.choice(lv1_list)
+    #^random variables for magice ideams
+    ap=random.choice(lv15p_list)
+    bp=random.choice(lv10p_list)
+    cp=random.choice(lv5p_list)
+    dp=random.choice(lv1p_list)
+    #^random cariables for potions
+    if level > 15:
+        for x in range(0, number):
+            a=random.choice(lv15_list)
+            print(a)
+    elif level >10:
+         for x in range(0, number):
+            b=random.choice(lv10_list)
+            print(b)
+    elif level >5:
+    
+          for x in range(0, number):
+            c=random.choice(lv5_list)
+            print(c)
+    else:
+          for x in range(0, number):
+            d=random.choice(lv1_list)
+            print(d)
+#if then statments for magic ideams
+    time.sleep(.45)
+    print("and now for the potions your players will get")
+    if level > 15:
+        for x in range(0, number):
+            ap=random.choice(lv15p_list)
+            print("They get "+ap+" healing potions")
+    elif level >10:
+         for x in range(0, number):
+            bp=random.choice(lv10p_list)
+            print("They get "+bp+" healing potions")
+    elif level >5:
+          for x in range(0, number):
+            cp=random.choice(lv5p_list)
+            print("They get "+cp+" healing potions")
+    else:
+          for x in range(0, number):
+            dp=random.choice(lv1p_list)
+            print("They get "+dp+" healing potions")
+    q=input()
+#if then statments for potions
+def loot_options():
+    print ("Do you want, just gold, just magic goodies, just potions, or everything? Type 1 for just gold, 2 for just magic stuff, 3 for just potions, or 4 for everything")
+    lop=int(input())
+    if lop==(1):
+        just_gold()
+    elif lop==(2):
+        magic_gen()
+    elif lop==(3):
+        potion_gen()
+    elif lop ==(4):
+        all_gen()
+    else:
+        intro()
+#this funtion directs users to witch loot genorator they want
+def newplayer_helper():
+    print("Before we figure out what class you should play, grab a charicter sheet, if you dont have one you can download it from, https://dnd.wizards.com/charactersheets. Now that you have that lets start off with figuring out what class you should play as, remeber there are no wrong awnsers.\nSo what sounds cooler using magic to solve problums and kill foes, using overwhelming physical power and kill to best your enimies, or using a mix of both?\for magic press 1, for pysical power press 2, for both press 3")
+    Nmage_or_non_mage=input()
+    if Nmage_or_non_mage==("1"):
+    
+        
+    elif Nmage_or_non_mage==("2"):
+        print("Great, now what sounds cooler, fighting your foes up close and personal with meelee wepons, or attacking from a range?\nFor up close press 1 for ranged press 2")
+        ranged_or_meelee=input()
+        if ranged_or_meelee==("1"):
+            print("Finally what sounds cooler, being a battle hardened solder, a raging barbarian or a monk that uses its fists and spiritual energy to fight?\nFor solder press 1 for barbarian press 2 for monk press 3")
+            barb_fight_or_monk=input()
+            if barb_fight_or_monk==("1"):
+                print("It seems like fighter would be a good class for you. Fighters are battle harderned solders that gain more ability score improvments than other classes\nand get to attack more times per round then other classes.\nDo you want to play the fighter?")
+                is_fighter=input()
+                if is_fighter==("yes")or("Yes"):
+                    print("Cool fighter was my first class too. Now take out your charicter sheet. On the top section youll notice a spot called \"class and level\"\n On that line write Fighter 1, that means your a first level fighter."
+                    stat_helper()
+                elif is_fighter==("no")or("No"):
+                    print("Ok then we should start the class selection over again")
+                    newplayer_helper()
+                
+                else:
+                    print("what?")
+            elif barb_fight_or_monk==("2"):
+                print("It seems like barbarian would be a good class for you. Barbarians are savage fighters that can reduce damage from physical attacks. Do you want to be a Barbarian?")
+                is_barbarian=input()
+                if is_barbarian==("yes")or("Yes"):
+                    print("Cool barbarian is a really great class for new players. Now take out your charicter sheet. On the top section youll notice a spot called \"class and level\"\n On that line write Barbarian 1, that means your a first level Barbarian."
+                    stat_helper()
+                elif is_barbarian==("no")or("No"):
+                    print("Ok then we should start the class selection over again")
+                    newplayer_helper()
+            elif barb_fight_or_monk==("3"):
+                print("It seems like Monk would be a good class for you. Monks use both physical attacks and spiritual power to attack enimies with blinding speed. They also gain \n faster movment. Would you like to play a monk?")
+                is_barbarian=input()
+                if is_monk==("yes")or("Yes"):
+                    print("Cool monk is a really great class for new players. Now take out your charicter sheet. On the top section youll notice a spot called \"class and level\"\n On that line write monk 1, that means your a first level monk."
+                    stat_helper()
+                elif is_monk==("no")or("No"):
+                    print("Ok then we should start the class selection over again")
+                    newplayer_helper()
+            else:
+            print("what")
+        elif ranged_or_meelee==("2"):
+            print("Finally what sounds cooler, assasinating your foes from the shadows or being a battle hardened solder who uses bow and arrow to pick of foes. For assasin press 1, for soilder press 2.") 
+            fight_or_assasin=input()
+            if fight_or_assasin==("1"):
+                print("The rouge is really powerful and a good class for new players. It gets extra damage whenever its attacks are unexpected. The class also allows you to gain expertese in some skills of your choice \n that means you gain bounus whenever you use those skills. Would you like to play the rouge?")
+                is_rouge=input()
+                if is_rouge==("yes")or("Yes"):
+                    print("Cool rouge is a really great class for new players. Now take out your charicter sheet. On the top section youll notice a spot called \"class and level\"\n On that line write rouge 1, that means your a first level rouge."
+                    stat_helper()
+                elif is_rouge==("no")or("No"):
+                    print("Ok then we should start the class selection over again")
+                    newplayer_helper()
+            elif fight_or_assasin==("2"):
+                print("It seems like fighter would be a good class for you. Fighters are battle harderned solders that gain more ability score improvments than other classes\nand get to attack more times per round then other classes.\nDo you want to play the fighter?")
+                is_fighter=input()
+                if is_fighter==("yes")or("Yes"):
+                    print("Cool fighter was my first class too. Now take out your charicter sheet. On the top section youll notice a spot called \"class and level\"\n On that line write Fighter 1, that means your a first level fighter."
+                    stat_helper()
+                elif is_fighter==("no")or("No"):
+                    print("Ok then we should start the class selection over again")
+                    newplayer_helper()
+    
+        
+    else:
+        print("that was the wrong awnser")
+#this funtion helps players figure out their class and build their first charicter (this section is not finished, it needs more work!
+def  player_intro():
+    print("needs more code but its working finn")
+#this funtion helps new players
+def newplayer_intro():
+    print("Since your so new to the game its probably best for you to play a few times before you DM, however if you really want to try DMing ill leave that up to you")
+    print("if you want to try DMing press 1, if you want help being a player press 2")
+    newDM=input()
+    if newDM==("1"):
+        newDM_helper()
+    else:
+        newplayer_helper()
+
+#this directs new players into helpful tools that show them how to ether run their first game or play their first game.
+def name_genorator():
+    print("welcom to the name genorator")
+#this is the name genorator, a dm can pick a race and a number and get that many names for that race. 
+def encounter_genorator():
+    print("welcom to the encounter genorator! I'll need to ask a few questions to help you make the perfect encounter for your party! \n First of all how many players do you have?")
+    encounter_number_of_players=int(input())
+    print("sweet, and what level are they")
+    encounter_level=int(input())
+    print("last but not least do you want the encounter to be easy, medium, hard or deadly? Put 1 for easy, 2 for medium, 3 for hard and 4 for deadly.")
+    encounter_difficulty=int(input())
+    
+
+def DM_helper():
+        print("Hellow fellow DM how can I help?\nFor a loot genorator press 1, for a name genorator press 2, for an encounter genorator press 3, for a donjon genorator press 4")
+        d=input()
+        if d==("1"):
+            loot_options()
+        elif d==("2"):
+            name_genorator()
+        elif d==("3"):
+            encounter_genorator()
+        elif d==("4"):
+            donjon_gen()
+        else:
+        print("what")
+        DM_helper()
+#this directs DMs to the tools they need        
+def intro():
+    print("Welcome to D&D helper! On a scale of 1 to 10, 1 being \"what's D&D\" and 10 being Gary Gygax how experenced are you with D&D?")
+    new_scale=int(input())
+    if new_scale < (2):
+        print("Let me be the first to welcom you to D&D, do you know what D&D is, or would you like an explinaiton? If you want an explination press 1, if not press any key.")
+        explain=input()
+        if explain==1:
+            print("Still working on a discription of D&D")
+            newplayer_intro()
+        else:
+            intro_p_1()
+    elif new_scale < (5):
+        print("Cool so you might still be a little new to be the DM but if you want to this program is here to help!\nAre you a DM or a player?")
+        DM_or_player=input()
+        if DM_or_player==DM:
+            DM_intro()
+        else:
+            player_intro()
+    elif new_scale < (9):
+        print("Sweet but just so you know this program is really only helpful for new players and DMs, if your a player you might just be better off going wit the book, but we \nhave a lot of tools to help DMs of all skill levels. Would you like the DM tools?")
+        R_U_DM=input()
+        if R_U_DM==("yes"):
+            DM_helper()
+        else:
+            print("sorry I cant help")
+    elif new_scale==(10):
+        ("print ahhhh a zombie DM/game creatore here to tell me im playing D&D wrong")
+        DM_helper()
+    else:
+        ("What?")
+        intro()
+#This section is the intro of the program, this is the first thing a user will see, and it will try to seperoate the user into one of three groups
+#First new players (who will have the game explained to them and will have help making their first charicter
+#Normal players who will have help making a charicter
+#DMs who will have help running a game, if there are problum with what place users are being directed to or the into this is where to look
+
+
+intro()
